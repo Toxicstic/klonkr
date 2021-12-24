@@ -1,0 +1,14 @@
+nl/linsoft/klonkr/BuildConfig.java
+ nl.linsoft.klonkr.BuildConfig
+nl/linsoft/klonkr/data/UserDatabase_Impl.java
+ nl.linsoft.klonkr.data.UserDatabase_Impl
+ nl.linsoft.klonkr.data.UserDatabase_Impl$1
+nl/linsoft/klonkr/data/UserDao_Impl.java
+ nl.linsoft.klonkr.data.UserDao_Impl
+ nl.linsoft.klonkr.data.UserDao_Impl$1
+ nl.linsoft.klonkr.data.UserDao_Impl$2
+ nl.linsoft.klonkr.data.UserDao_Impl$3
+ nl.linsoft.klonkr.data.UserDao_Impl$4
+ nl.linsoft.klonkr.data.UserDao_Impl$5
+ nl.linsoft.klonkr.data.UserDao_Impl$6
+ nl.linsoft.klonkr.data.UserDao_Impl$7

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityLiveRegion="polite"
+    android:background="@color/black"
+    android:padding="16dp"
+    tools:context=".fragments.Questions">
+
+    <ToggleButton
+        android:id="@+id/questionsModeButton"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/josefin_sans"
+        android:lineSpacingExtra="36sp"
+        android:text="@string/m"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textOff="@string/a"
+        android:textOn="@string/y_n"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/questionsTextField"
+        app:layout_constraintEnd_toStartOf="@+id/questionsAddButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/questionsTextField"
+        app:layout_constraintTop_toTopOf="@+id/questionsTextField" />
+
+    <TextView
+        android:id="@+id/questionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/josefin_sans"
+        android:text="@string/questions"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <ImageButton
+        android:id="@+id/questionsReturnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@string/about"
+        android:src="@drawable/ic_baseline_keyboard_return_24"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/questionsQuestions"
+        android:layout_width="335dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionsTitle"
+        tools:listitem="@layout/questions_row">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/questionsTextField"
+        android:layout_width="268dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/accent"
+        android:ems="10"
+        android:hint="@string/your_question"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/accent"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/questionsQuestions"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/questionsQuestions"
+        app:layout_constraintTop_toBottomOf="@+id/questionsQuestions" />
+
+    <ImageButton
+        android:id="@+id/questionsAddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@string/thing"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/questionsDeleteButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/delete"
+        android:contentDescription="@string/about"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/questionsQuestions"
+        app:layout_constraintEnd_toEndOf="@+id/questionsQuestions"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
